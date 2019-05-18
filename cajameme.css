@@ -1,0 +1,10 @@
+.cajaimg{
+    display: flex;
+    justify-content: center;
+}
+.image{
+    flex-wrap: wrap;
+    padding: 32px;
+    border: 1px solid;
+    flex-direction: column;    
+}
