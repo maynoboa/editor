@@ -6,7 +6,7 @@
 <link rel="stylesheet" href="cajameme.css">
 </head>
 <body>
-    <button class="show_img">mostrar</button>
+    <!-- <button class="show_img">mostrar</button> -->
     <!-- <span class="btn btn-primary btn-file">
     Browse <input type='file' onchange="readURL(this);" />
 
@@ -37,7 +37,20 @@
         </div>
         <div id="previewImage"></div>
     </div>
-    <div class="cajaimg"></div>
+    <div class="cajaimg">
+        <div class="box man">
+            <img id="man" src="memes/man.jpeg" >
+            <button class="show" onclick="pulsar()">mostrar</button>
+        </div>
+        <div class="box no">
+            <img src="memes/no.jpeg">
+            <button class="show" onclick="pulsar1()">mostrar</button>
+        </div>
+        <div class="box pooh">
+            <img src="memes/pooh.jpeg">
+            <button class="show" onclick="pulsar2()">mostrar</button>
+        </div>
+    </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script type="text/javascript" src="motor.js"></script>
     <script type="text/javascript" src="js.js"></script>

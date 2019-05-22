@@ -26,8 +26,7 @@ $(document).ready(function(){
             var reader = new FileReader();
     
             reader.onload = function (e) {
-                $('#blah')
-                    .attr('src', e.target.result);
+                $('#blah').attr('src', e.target.result);
             };
     
             reader.readAsDataURL(input.files[0]);
@@ -53,10 +52,16 @@ $('#disminuir').on('click', function() {
 
 /*------hide-show-----------*/
 $(document).ready(function(){
-    $("#hide").click(function(){
-      $("p").hide();
-    });
-     $(".show").click(function(){
-    //   $(".hide").show();
-    });
+    // $("#hide").click(function(){
+    //   $("p").hide();
+    // });
+    //  $(".show").click(function(){
+    // //   $(".hide").show();
+    // });
+
+    $("#i_52").click(function () {
+      	var id = this.id; 
+      	alert(id);
+      });
+
   });
