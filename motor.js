@@ -37,18 +37,7 @@ $(document).ready(function(){
       }
 /*----------aumentar tamaño----------*/
 
-var fontSize = 1,
-    factor = 0.1;
 
-$('#aumentar').on('click', function() {
-  fontSize = fontSize + factor;
-  $('.edit1').css( {"font-size": fontSize + 'em'});
-});
-
-$('#disminuir').on('click', function() {
-  fontSize = fontSize - factor;
-  $('.edit1').css( {"font-size": fontSize + 'em'});
-});
 
 /*------hide-show-----------*/
 $(document).ready(function(){
@@ -63,5 +52,18 @@ $(document).ready(function(){
       	var id = this.id; 
       	alert(id);
       });
+var fontSize = 2,
+    factor = 0.1;
+
+$('#aumentar').on('click', function() {
+  fontSize = fontSize + factor;
+  $('.edit1').css( {"font-size": fontSize + 'em'});
+});
+
+$('#disminuir').on('click', function() {
+  fontSize = fontSize - factor;
+  $('.edit1').css( {"font-size": fontSize + 'em'});
+});
+      
 
   });
