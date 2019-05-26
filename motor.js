@@ -17,7 +17,7 @@ $(document).ready(function(){
         var imgageData = getCanvas.toDataURL("image/png");
         // Now browser starts downloading it instead of just showing it
         var newData = imgageData.replace(/^data:image\/png/, "data:application/octet-stream");
-        $("#btn-Convert-Html2Image").attr("download", "your_pic_name.png").attr("href", newData);
+        $("#btn-Convert-Html2Image").attr("download", "your_meme.png").attr("href", newData);
         });
     
     });
@@ -47,6 +47,13 @@ $(document).ready(function(){
     //  $(".show").click(function(){
     // //   $(".hide").show();
     // });
+    $("#btn-Preview-Image").click(function() {
+      $('html, body').animate({
+          scrollTop: $("#previewImage").offset().top
+      }, 1000);
+    return false;
+  });
+
 
     $("#i_52").click(function () {
       	var id = this.id; 
@@ -65,5 +72,20 @@ $('#disminuir').on('click', function() {
   $('.edit1').css( {"font-size": fontSize + 'em'});
 });
       
-
+/*-----colores-------*/
+      $('#picker-color').colpick({
+        layout:'hex',
+        submit:1,
+        color:'#f6f6f6',
+        onSubmit:function(hsb,hex,rgb,el) {
+          $(el).colpickHide();
+        },
+      onChange:function(hsb,hex,rgb,el,bySetColor) {
+        $("#block").css("color",'#'+hex);
+          $(el).css('border-color','#'+hex);
+          if(!bySetColor) $(el).val('#' +hex);
+        }
+      }).keyup(function(){
+        $(this).colpickSetColor(this.value);
+      });
   });
